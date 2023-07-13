@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database: 
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345
+    ports:
+      - 3306:3306
+    container_name: database_test
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
