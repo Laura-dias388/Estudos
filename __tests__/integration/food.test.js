@@ -2,18 +2,11 @@ const chai = require('chai');
 const { expect } = chai;
 const chaiHttp = require('chai-http');
 const sinon = require('sinon');
-const app = require('../src/App');
-const { Food } = require('../src/database/models');
+const app = require('../../src/App');
+const { Food } = require('../../src/database/models');
+const { fooodMock } = require('../mocks/food.mock');
 
 chai.use(chaiHttp);
-
-const fooodMock = [
-  { dataValues: { id: 1, name: "Pizza" } },
-  { dataValues: { id: 2, name: "Hamburguer" } },
-  { dataValues: { id: 3, name: "Hot dog" } },
-  { dataValues: { id: 4, name: "Chocolate" } },
-  { dataValues: { id: 5, name: "Sorvete" } }
-]
 
 const foodEmpty = [];
 const foodRespDiference = {};
