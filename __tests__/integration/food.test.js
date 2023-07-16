@@ -4,7 +4,7 @@ const chaiHttp = require('chai-http');
 const sinon = require('sinon');
 const app = require('../../src/App');
 const { Food } = require('../../src/database/models');
-const { fooodMock } = require('../mocks/food.mock');
+const { fooodMock } = require('./mocks/food.mock');
 
 chai.use(chaiHttp);
 
